@@ -1,0 +1,30 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+  simple:
+    format: '{asctime} - {name} - {levelname} - {message}'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+    style: '{'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stderr
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: simple
+    filename: info.log
+    maxBytes: 1048576
+    backupCount: 1
+    encoding: utf8
+    delay: True
+loggers:
+  simpleExample:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console, file]

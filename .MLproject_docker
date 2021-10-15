@@ -1,0 +1,5 @@
+name: foodcast
+
+docker_env: 
+  image: foodcast_docker
+

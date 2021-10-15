@@ -1,0 +1,100 @@
+name: foodcast
+
+conda_env: conda_run.yaml
+
+entry_points:
+
+  run_pipeline:
+    parameters:
+      next_week: {type: int}
+      start_week: {type: int}
+      end_week: {type: int}
+      n_fold: {type: int, default: 10}
+      n_estimators: {type: int, default: 10}
+      n_models: {type: int, default: 10}
+      degree: {type: int, default: 1}
+      lag_in_week: {type: int, default: 1}
+    command: "python -m foodcast.application.run_pipeline --next-week {next_week}
+                                                          --start-week {start_week}
+                                                          --end-week {end_week}
+                                                          --n-fold {n_fold}
+                                                          --n-estimators {n_estimators}
+                                                          --n-models {n_models}
+                                                          --degree {degree}
+                                                          --lag-in-week {lag_in_week}"
+
+  predict:
+    parameters:
+      next_week: {type: int}
+      start_week: {type: int}
+      end_week: {type: int}
+      n_estimators: {type: int, default: 10}
+      n_models: {type: int, default: 10}
+      degree: {type: int, default: 1}
+      lag_in_week: {type: int, default: 1}
+    command: "python -m foodcast.application.predict --next-week {next_week}
+                                                     --start-week {start_week}
+                                                     --end-week {end_week}
+                                                     --n-estimators {n_estimators}
+                                                     --n-models {n_models}
+                                                     --degree {degree}
+                                                     --lag-in-week {lag_in_week}"
+
+  future:
+    parameters:
+      next_week: {type: int}
+      degree: {type: int, default: 1}
+      lag_in_week: {type: int, default: 1}
+    command: "python -m foodcast.application.future --next-week {next_week}
+                                                    --degree {degree}
+                                                    --lag-in-week {lag_in_week}"
+
+  train:
+    parameters:
+      start_week: {type: int}
+      end_week: {type: int}
+      n_estimators: {type: int, default: 10}
+      n_models: {type: int, default: 10}
+      degree: {type: int, default: 1}
+      lag_in_week: {type: int, default: 1}
+    command: "python -m foodcast.application.train --start-week {start_week}
+                                                   --end-week {end_week}
+                                                   --n-estimators {n_estimators}
+                                                   --n-models {n_models}
+                                                   --degree {degree}
+                                                   --lag-in-week {lag_in_week}"
+  
+  validate:
+    parameters:
+      start_week: {type: int}
+      end_week: {type: int}
+      n_fold: {type: int, default: 10}
+      n_estimators: {type: int, default: 10}
+      n_models: {type: int, default: 10}
+      degree: {type: int, default: 1}
+      lag_in_week: {type: int, default: 1}
+    command: "python -m foodcast.application.validate --start-week {start_week}
+                                                      --end-week {end_week}
+                                                      --n-fold {n_fold}
+                                                      --n-estimators {n_estimators}
+                                                      --n-models {n_models}
+                                                      --degree {degree}
+                                                      --lag-in-week {lag_in_week}"
+
+  features:
+    parameters:
+      start_week: {type: int}
+      end_week: {type: int}
+      degree: {type: int, default: 1}
+      lag_in_week: {type: int, default: 1}
+    command: "python -m foodcast.application.features --start-week {start_week}
+                                                      --end-week {end_week}
+                                                      --degree {degree}
+                                                      --lag-in-week {lag_in_week}"
+  
+  load:
+    parameters:
+      start_week: {type: int}
+      end_week: {type: int}
+    command: "python -m foodcast.application.load --start-week {start_week}
+                                                  --end-week {end_week}"

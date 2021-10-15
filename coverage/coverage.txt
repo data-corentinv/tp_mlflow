@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.6, pytest-5.2.1, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/users_name/Documents/mlflow_training
+plugins: cov-2.8.1
+collected 45 items
+
+tests/integration_tests/test_ETL.py .                                    [  2%]
+tests/unit_tests/application/test_features.py .                          [  4%]
+tests/unit_tests/application/test_future.py .                            [  6%]
+tests/unit_tests/application/test_load.py .                              [  8%]
+tests/unit_tests/application/test_mlflow_utils.py .............          [ 37%]
+tests/unit_tests/application/test_predict.py .                           [ 40%]
+tests/unit_tests/application/test_run_pipeline.py .                      [ 42%]
+tests/unit_tests/application/test_train.py .                             [ 44%]
+tests/unit_tests/application/test_validate.py .                          [ 46%]
+tests/unit_tests/domain/test_feature_engineering.py ......               [ 60%]
+tests/unit_tests/domain/test_forecast.py ......                          [ 73%]
+tests/unit_tests/domain/test_multi_model.py ......                       [ 86%]
+tests/unit_tests/domain/test_transform.py ....                           [ 95%]
+tests/unit_tests/infrastructure/test_extract.py ..                       [100%]
+
+---------- coverage: platform darwin, python 3.7.6-final-0 -----------
+Name                                     Stmts   Miss Branch BrPart  Cover
+--------------------------------------------------------------------------
+foodcast/__init__.py                         0      0      0      0   100%
+foodcast/application/__init__.py             0      0      0      0   100%
+foodcast/application/features.py            33      0      0      0   100%
+foodcast/application/future.py              33      0      0      0   100%
+foodcast/application/load.py                20      0      0      0   100%
+foodcast/application/mlflow_utils.py        61      0     20      0   100%
+foodcast/application/predict.py             38      0      0      0   100%
+foodcast/application/run_pipeline.py        69      0      4      0   100%
+foodcast/application/train.py               39      0      0      0   100%
+foodcast/application/validate.py            45      0      4      0   100%
+foodcast/domain/__init__.py                  0      0      0      0   100%
+foodcast/domain/decorators.py               14      0      2      0   100%
+foodcast/domain/feature_engineering.py      43      0      2      0   100%
+foodcast/domain/forecast.py                 57      0     14      0   100%
+foodcast/domain/multi_model.py              40      0     10      0   100%
+foodcast/domain/transform.py                35      0      0      0   100%
+foodcast/infrastructure/__init__.py          0      0      0      0   100%
+foodcast/infrastructure/extract.py          12      0      4      0   100%
+foodcast/settings/__init__.py               28      2      2      1    90%
+foodcast/settings/base.py                    4      0      0      0   100%
+foodcast/settings/dev.py                     3      0      0      0   100%
+--------------------------------------------------------------------------
+TOTAL                                      574      2     62      1    99%
+Coverage HTML written to dir coverage/htmlcov
+
+
+============================== 45 passed in 7.17s ==============================

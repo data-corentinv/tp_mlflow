@@ -1,0 +1,4 @@
+name: foodcast
+
+conda_env: conda_run.yaml
+

@@ -1,0 +1,14 @@
+name: foodcast
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - cloudpickle=1.3.0
+    - click=7.0
+    - mlflow=1.8.0
+    - numpy=1.17.4
+    - pandas=0.25.1
+    - plotly=4.5.4
+    - python=3.7.6
+    - python-dotenv=0.10.3
+    - scikit-learn=0.21.3
