@@ -1,0 +1,20 @@
+==> 2022-10-21 23:04:07 <==
+# cmd: /Users/CORENTIN/miniconda3/bin/conda-env create -f conda.yaml
+# conda version: 4.12.0
++defaults/noarch::wheel-0.37.1-pyhd3eb1b0_0
++defaults/osx-64::ca-certificates-2022.07.19-hecd8cb5_0
++defaults/osx-64::certifi-2022.9.24-py37hecd8cb5_0
++defaults/osx-64::libcxx-14.0.6-h9765a3e_0
++defaults/osx-64::libedit-3.1.20210910-hca72f7f_0
++defaults/osx-64::libffi-3.2.1-h0a44026_1007
++defaults/osx-64::ncurses-6.3-hca72f7f_3
++defaults/osx-64::openssl-1.1.1q-hca72f7f_0
++defaults/osx-64::pip-22.2.2-py37hecd8cb5_0
++defaults/osx-64::python-3.7.6-h359304d_2
++defaults/osx-64::readline-7.0-h1de35cc_5
++defaults/osx-64::setuptools-63.4.1-py37hecd8cb5_0
++defaults/osx-64::sqlite-3.33.0-hffcf06c_0
++defaults/osx-64::tk-8.6.12-h5d9f67b_0
++defaults/osx-64::xz-5.2.6-hca72f7f_0
++defaults/osx-64::zlib-1.2.12-h4dc903c_3
+# update specs: ['python=3.7.6', 'pip']

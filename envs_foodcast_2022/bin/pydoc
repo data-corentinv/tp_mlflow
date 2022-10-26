@@ -1,0 +1,5 @@
+#!/Users/CORENTIN/miniconda3/envs/foodcast_2022/bin/python3.7
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()
