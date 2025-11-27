@@ -24,7 +24,7 @@ def clean(df: pd.DataFrame) -> pd.DataFrame:
     df = df.rename(columns={'order_number': 'order_id'})
     df = df.sort_values('order_date')
     df['total_product_price'] = df['quantity']*df['product_price']
-    df['cash_in'] = df.groupby('order_id')['total_product_price'].transform(np.sum)
+    df['cash_in'] = df.groupby('order_id')['total_product_price'].transform('sum')
     df = df.drop(
         columns=['item_name', 'quantity', 'product_price',
                  'total_products', 'total_product_price'],
